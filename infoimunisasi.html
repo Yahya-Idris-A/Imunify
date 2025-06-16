@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <title>Imunify</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+  <title>Informasi Imunisasi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef2f5;
+      margin: 0;
+      padding-top: 0px;
+      padding-bottom: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+     html, body {
+    overflow-x: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    h2 {
+        text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+
+    .card {
+      background-color: #fff;
+      width:100%;
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .card a {
+      display: block;
+      padding: 15px 20px;
+      font-size: 16px;
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: bold;
+      border-top: 1px solid #eee;
+      background-color: #fafafa;
+      text-align: center;
+      margin : 10px 0 5px 0;
+    }
+
+    .card a:hover {
+      background-color: #e8f0ff;
+      color: #1e6bb8;
+    }
+
+    .card p {
+      margin-top: 0px;      
+      padding: 0 20px;       
+      text-align: justify;
+      color: #333;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        max-width:1200px;
+        margin: 0 auto;
+    }
+  </style>
+</head>
+
+
+<body>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+            <img src="About.jpg" alt="Logo_Imunify" style="height: 50px; margin-right: 10px;">
+            <span style="color: #00B2FF; font-weight: bold; font-size: 30px;">Imunify</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="About.html" class="nav-item nav-link">About</a>
+                <a href="jadwal.php" class="nav-item nav-link">Jadwal</a>
+                <a href="infoimunisasi.html" class="nav-item nav-link active">Informasi Imunisasi</a>
+                <a href="ArtikelBaru.html" class="nav-item nav-link">Artikel</a>
+            </div>
+            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+     <!-- Full Screen Search Start -->
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Full Screen Search End -->
+
+     <!-- Hero Start -->
+    <div class="container-fluid bg-primary py-5 hero-header mb-5">
+        <div class="row py-3">
+            <div class="col-12 text-center">
+                <h1 class="display-3 text-white animated zoomIn">Informasi Imunisasi</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+<div class="card-container">
+  <div class="card">
+        <img src="aset/polio.jpg" alt="Imunisasi Polio" class="w-full h-40 object-cover rounded-md mb-4">
+        <h2 class="text-xl font-semibold mb-2">Imunisasi Polio</h2>
+        <p class="text-sm">Imunisasi polio mencegah poliomielitis, penyakit yang disebabkan oleh virus dan dapat menyebabkan kelumpuhan permanen. Tujuannya adalah mencegah infeksi dan penyebaran virus polio, dengan manfaat utama melindungi anak dari kecacatan. Diberikan pertama kali saat lahir (OPV 0), lalu di usia 2, 3, dan 4 bulan, serta melalui IPV pada jadwal imunisasi rutin.</p>
+      </div>
+
+
+  <div class="card">
+        <img src="aset/Vaksin-Campak.jpg.webp" alt="Imunisasi Campak" class="w-full h-40 object-cover rounded-md mb-4">
+        <h2 class="text-xl font-semibold mb-2">Imunisasi Campak</h2>
+        <p class="text-sm">Vaksin campak diberikan untuk mencegah penyakit campak yang sangat menular dan dapat menyebabkan komplikasi berat seperti pneumonia dan radang otak. Tujuannya adalah membentuk kekebalan tubuh terhadap virus campak, dan manfaatnya adalah mencegah komplikasi serius dan kematian. Imunisasi ini diberikan pertama kali saat bayi berusia 9 bulan dan diulang dalam bentuk vaksin MMR pada usia 18 bulan.</p>
+      </div>
+
+  <div class="card">
+    <img src="aset/DPT-vaccine.jpg" alt="Imunisasi DPT" class="w-full h-40 object-cover rounded-md mb-4">
+        <h2 class="text-xl font-semibold mb-2">Imunisasi DPT (Difteri, Pertusis, Tetanus)</h2>
+        <p class="text-sm">Imunisasi DPT melindungi anak dari tiga penyakit: difteri, pertusis, dan tetanus. Vaksin ini bertujuan untuk membentuk kekebalan terhadap infeksi berbahaya yang menyerang saluran napas dan sistem saraf, dengan manfaat mencegah komplikasi dan kematian. Diberikan lima kali, yaitu pada usia 2, 3, 4, 18 bulan, dan 5 tahun.</p>
+      </div>
+
+  <div class="card">
+    <img src="aset/bcg.jpg" alt="Imunisasi BCG" class="w-full h-40 object-cover rounded-md mb-4">
+        <h2 class="text-xl font-semibold mb-2">Imunisasi BCG (Bacillus Calmette-Guérin)</h2>
+        <p class="text-sm">Imunisasi BCG adalah vaksin yang digunakan untuk mencegah penyakit tuberkulosis (TBC), terutama bentuk berat seperti TBC meningitis. Tujuannya untuk memberikan kekebalan terhadap TBC sejak dini, dengan manfaat melindungi bayi dari infeksi serius yang dapat merusak organ vital. Vaksin ini diberikan satu kali, sebaiknya segera setelah bayi lahir atau sebelum usia 2 bulan.</p>
+      </div>
+
+  <div class="card">
+    <img src="aset/hepatitis b.png" alt="Imunisasi HB" class="w-full h-40 object-cover rounded-md mb-4">
+        <h2 class="text-xl font-semibold mb-2">Imunisasi HB (Hepatitis B)</h2>
+        <p class="text-sm">Vaksin hepatitis B digunakan untuk mencegah infeksi virus hepatitis B yang menyerang hati. Tujuannya adalah mencegah penyakit hati kronis dan kanker hati, dengan manfaat jangka panjang berupa perlindungan terhadap kerusakan hati. Diberikan pertama kali dalam 24 jam setelah lahir, lalu dilanjutkan bersama vaksin kombinasi pada usia 2, 3, dan 4 bulan.</p>
+      </div>
+
+  <div class="card">
+    <img src="aset/HIB.jpg" alt="Imunisasi HIB" class="w-full h-40 object-cover rounded-md mb-4">
+        <h2 class="text-xl font-semibold mb-2">Imunisasi HIB (Haemophilus influenzae tipe B)</h2>
+        <p class="text-sm">Imunisasi HIB melindungi dari infeksi bakteri Haemophilus influenzae tipe B yang bisa menyebabkan meningitis, pneumonia, dan sepsis. Tujuannya adalah membentuk kekebalan terhadap bakteri tersebut, dan manfaatnya adalah mencegah penyakit serius yang dapat menyebabkan kecacatan atau kematian. Vaksin ini diberikan pada usia 2, 3, dan 4 bulan, serta ulangan di usia 18 bulan, biasanya dalam bentuk kombinasi vaksin pentavalen.</p>
+      </div>
+</div>
+ <!-- Footer Start -->
+<footer style="background-color: #051225; width: 100%; margin-top: 40px;">
+  <div class="container py-4 text-light">
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+        <p class="mb-0">
+          &copy; <a class="text-white border-bottom" href="#">Pemrograman Web Kelompok 5</a>
+        </p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <p class="mb-0">
+          Manajemen Informasi Kesehatan 2022
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- Footer End -->
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="lib/wow/wow.min.js"></script>
+<script src="lib/easing/easing.min.js"></script>
+<script src="lib/waypoints/waypoints.min.js"></script>
+<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+<script src="lib/tempusdominus/js/moment.min.js"></script>
+<script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+<script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+<script src="lib/twentytwenty/jquery.event.move.js"></script>
+<script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+</body>
+</html>

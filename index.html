@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Imunify</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-dark m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+        <div class="spinner-grow text-secondary m-1" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+        <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
+            <img src="About.jpg" alt="Logo_Imunify" style="height: 50px; margin-right: 10px;">
+            <span style="color: #00B2FF; font-weight: bold; font-size: 30px;">Imunify</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link active">Home</a>
+                <a href="About.html" class="nav-item nav-link">About</a>
+                <a href="jadwal.php" class="nav-item nav-link">Jadwal</a>
+                <a href="infoimunisasi.html" class="nav-item nav-link">Informasi Imunisasi</a>
+                <a href="ArtikelBaru.html" class="nav-item nav-link">Artikel</a>
+            </div>
+            <button type="button" class="btn text-dark" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fa fa-search"></i></button>
+        </div>
+    </nav>
+    <div class="modal fade" id="searchModal" tabindex="-1">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex align-items-center justify-content-center">
+                    <div class="input-group" style="max-width: 600px;">
+                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
+                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="Home.jpg" alt="Image" style="max-height: 500px; object-fit: cover;">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h1 class="text-white mb-md-4 animated zoomIn" style="font-size: 4rem;">Selamat datang di Imunify!</h1>
+                            <a href="jadwal.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInCenter" style="font-size: 1.2rem;">More Information</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="container-fluid pt-5 pb-1 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <div class="section-title mb-4">
+                        <h5 class="position-relative d-inline-block text-primary text-uppercase">About Us</h5>
+                        <h1 class="display-5 mb-0">Smart Protection for a Healthier Generation</h1>
+                    </div>
+                    <p class="mb-4">Imunify adalah platform edukatif dan monitoring berbasis digital yang membantu masyarakat memahami pentingnya imunisasi dan mendapatkan informasi yang terpercaya serta terverifikasi dari sumber resmi.</p>
+                </div>
+                <div class="col-lg-5" style="min-height: 500px;">
+                    <div class="position-relative h-100">
+                        <img class="position-absolute w-50 h-50 rounded wow zoomIn" data-wow-delay="0.9s" src="img/about.jpg" style="object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-title mt-n5 mb-4 text-left">
+                <h5 class="position-relative d-inline-block text-primary text-uppercase">Mengapa Memilih Imunify?</h5>
+                <h2 class="display-6">Keunggulan Platform Kami</h2>
+            </div>
+            <div class="row g-5 text-left">
+                <div class="col-md-4">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h4 class="mt-2">Analisis Data Imunisasi</h4>
+                    <p>Monitoring dan pelaporan data imunisasi secara real-time dengan grafik yang informatif.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-mobile-alt fa-3x text-primary mb-3"></i>
+                    <h4 class="mt-2">Akses Mudah</h4>
+                    <p>Dapat diakses di berbagai perangkat — dari smartphone hingga desktop, kapan saja dan di mana saja.</p>
+                </div>
+                <div class="col-md-4">
+                    <i class="fas fa-user-check fa-3x text-primary mb-3"></i>
+                    <h4 class="mt-2">Antarmuka Ramah Pengguna</h4>
+                    <p>Desain sederhana dan navigasi yang intuitif, cocok untuk semua kalangan pengguna.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Start -->
+    <div class="container-fluid text-light py-4" style="background: #051225;">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Pemrograman Web Kelompok 5</a></p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Manajemen Informasi Kesehatan 2022 <a class="text-white border-bottom">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+    <script src="lib/twentytwenty/jquery.event.move.js"></script>
+    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
