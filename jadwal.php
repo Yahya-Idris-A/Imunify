@@ -3,7 +3,7 @@
 // Koneksi ke database
 $host = "imunify.mysql.database.azure.com";
 $username = "imunify";
-$password = "$Imunify";
+$password = '$Imunify';
 $database = "imunify";
 
 $conn = new mysqli($host, $username, $password, $database);
