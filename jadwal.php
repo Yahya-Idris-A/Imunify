@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <?php
 // Koneksi ke database
-$host = "localhost"; 
-$username = "root"; 
-$password = ""; 
-$database = "imunify"; 
+$host = "imunify.mysql.database.azure.com";
+$username = "imunify";
+$password = '$Imunify';
+$database = "imunify";
 
 $conn = new mysqli($host, $username, $password, $database);
 
@@ -29,7 +29,7 @@ $result = $conn->query($sql);
 // Kelompokkan data berdasarkan puskesmas
 $dataPuskesmas = [];
 if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
+    while ($row = $result->fetch_assoc()) {
         $namaPuskesmas = $row['nama'];
         if (!isset($dataPuskesmas[$namaPuskesmas])) {
             $dataPuskesmas[$namaPuskesmas] = [
@@ -63,7 +63,7 @@ $conn->close();
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -80,12 +80,18 @@ $conn->close();
     <style>
         /* Add custom styles for the cards */
         .card {
-            color: #343a40; /* White text */
-            border-radius: 20px; /* Rounding corners */
-            padding: 20px; /* Adding padding */
-            margin: 20px; /* Margin around cards */
-            flex: 1; /* Make cards flexible */
-            max-width: 48%; /* Limit max-width */
+            color: #343a40;
+            /* White text */
+            border-radius: 20px;
+            /* Rounding corners */
+            padding: 20px;
+            /* Adding padding */
+            margin: 20px;
+            /* Margin around cards */
+            flex: 1;
+            /* Make cards flexible */
+            max-width: 48%;
+            /* Limit max-width */
             margin-bottom: 4px;
             margin-left: 8px;
             padding-right: 16px;
@@ -94,7 +100,9 @@ $conn->close();
             overflow: visible;
             box-sizing: border-box;
         }
-        .schedule-container, .schedule-item {
+
+        .schedule-container,
+        .schedule-item {
             margin: 10px 0;
         }
 
@@ -119,37 +127,43 @@ $conn->close();
         }
 
         .card .jam {
-        float: right;
-        font-weight: normal;
-        padding-right: 16px;
+            float: right;
+            font-weight: normal;
+            padding-right: 16px;
         }
 
         .card .jenis {
-          margin-top: 5px;
-          white-space: pre-line;
+            margin-top: 5px;
+            white-space: pre-line;
         }
-    
+
         .card .hubungi {
-          position: inherit;;
-          bottom: 15px;
-          right: 15px;
-          display: flex;
-          align-items: center;
-          font-size: 14px;
+            position: inherit;
+            ;
+            bottom: 15px;
+            right: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
         }
 
         .card .hubungi img {
-          margin-left: 5px;
-          width: 36px;
-          height: 36px;
-          align-items: center;
+            margin-left: 5px;
+            width: 36px;
+            height: 36px;
+            align-items: center;
         }
+
         .vaccine-link {
-            color: white; /* Ensure links are white */
+            color: white;
+            /* Ensure links are white */
         }
+
         .row {
-            display: flex; /* Use flexbox for row layout */
-            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+            display: flex;
+            /* Use flexbox for row layout */
+            flex-wrap: wrap;
+            /* Allow wrapping for smaller screens */
         }
 
         .whatsapp-link {
@@ -174,14 +188,14 @@ $conn->close();
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
-            box-shadow: 0 4px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
         }
-        
+
         .whatsapp-btn:hover {
             background-color: #128C7E;
             transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             color: aliceblue;
         }
     </style>
@@ -243,50 +257,51 @@ $conn->close();
 
 
     <!-- Service Start -->
-<!-- Service Start -->
-<div style="background-color: #06a6dd; padding: 20px 0;">
-    <div class="container-fluid py-1 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container py-1">
-            <div class="row justify-content-center">
-                <?php 
-                foreach ($dataPuskesmas as $namaPuskesmas => $data): 
-                ?>
-                <div class="col-xl-5 col-lg-6 col-12 mb-4 px-3">
-                <div class="card h-100" style="max-width: 550px; margin-bottom: <?php echo ($count % 2 == 0) ? '4px' : '2px'; ?>;">
-                    <h2><?php echo htmlspecialchars($namaPuskesmas); ?></h2>
-                    <div class="schedule-container">
-                        <ul>
-                            <?php foreach ($data['jadwal'] as $jadwal): ?>
-                            <div class="schedule-item">
-                                <li>
-                                    <span class="time h1"><?php echo htmlspecialchars($jadwal['hari']); ?></span>
-                                    <span class="jam h2"><?php echo htmlspecialchars($jadwal['jam']); ?></span><br>
-                                    <a class="jenis h3" style="color: #343a40;"><?php echo htmlspecialchars($jadwal['jenis_imunisasi']); ?></a>
-                                </li>
+    <!-- Service Start -->
+    <div style="background-color: #06a6dd; padding: 20px 0;">
+        <div class="container-fluid py-1 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="container py-1">
+                <div class="row justify-content-center">
+                    <?php
+                    foreach ($dataPuskesmas as $namaPuskesmas => $data):?>
+                    <div class="col-xl-5 col-lg-6 col-12 mb-4 px-3">
+                    <div class="card h-100" style="max-width: 550px; margin-bottom:
+                        <?php echo ($count % 2 == 0)? '4px' : '2px'; ?>;">
+    
+                            <h2><?php echo htmlspecialchars($namaPuskesmas); ?></h2>
+                            <div class="schedule-container">
+                                <ul>
+                                    <?php foreach ($data['jadwal'] as $jadwal): ?>
+                                        <div class="schedule-item">
+                                            <li>
+                                                <span class="time h1"><?php echo htmlspecialchars($jadwal['hari']); ?></span>
+                                                <span class="jam h2"><?php echo htmlspecialchars($jadwal['jam']); ?></span><br>
+                                                <a class="jenis h3" style="color: #343a40;"><?php echo htmlspecialchars($jadwal['jenis_imunisasi']); ?></a>
+                                            </li>
+                                        </div>
+                                    <?php endforeach; ?>
+
+                                    <p>📍 <?php echo htmlspecialchars($data['alamat']); ?></p><br>
+                                    <div class="hubungi">
+                                        <a href="https://wa.me/<?php echo htmlspecialchars($data['kontak']); ?>?text=Mau%20daftar%20imunisasi%20di%20<?php echo urlencode($namaPuskesmas); ?>"
+                                            class="whatsapp-btn"
+                                            onclick="return confirmRedirect()">
+                                            <span class="whatsapp-icon"></span> Klik untuk Daftar Imunisasi
+                                        </a>
+                                    </div>
+                                </ul>
                             </div>
-                            <?php endforeach; ?>
-                            
-                            <p>📍 <?php echo htmlspecialchars($data['alamat']); ?></p><br>
-                            <div class="hubungi">
-                                <a href="https://wa.me/<?php echo htmlspecialchars($data['kontak']); ?>?text=Mau%20daftar%20imunisasi%20di%20<?php echo urlencode($namaPuskesmas); ?>" 
-                                    class="whatsapp-btn" 
-                                    onclick="return confirmRedirect()">
-                                    <span class="whatsapp-icon"></span> Klik untuk Daftar Imunisasi
-                                </a>
-                            </div>
-                        </ul>
+                        </div>
                     </div>
+                    <?php
+                    endforeach;
+                    ?>
                 </div>
-                </div>
-                <?php 
-                endforeach; 
-                ?>
             </div>
         </div>
     </div>
-</div>
-<!-- Service End -->
-    
+    <!-- Service End -->
+
 
     <!-- Footer Start -->
     <div class="container-fluid text-light py-4" style="background: #051225;">
@@ -320,11 +335,11 @@ $conn->close();
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <script>
-    function confirmRedirect() {
-        const userConfirmed = confirm("Anda akan diarahkan ke WhatsApp puskesmas");
-        return userConfirmed; // Jika user klik OK akan lanjut, jika Cancel tidak lanjut
-    }
-</script>
+        function confirmRedirect() {
+            const userConfirmed = confirm("Anda akan diarahkan ke WhatsApp puskesmas");
+            return userConfirmed; // Jika user klik OK akan lanjut, jika Cancel tidak lanjut
+        }
+    </script>
 </body>
 
 </html>
