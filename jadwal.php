@@ -96,6 +96,7 @@ $conn->close();
             margin-left: 8px;
             padding-right: 16px;
             padding-bottom: 16px;
+            justify-content: center;
             position: relative;
             overflow: visible;
             box-sizing: border-box;
@@ -108,12 +109,13 @@ $conn->close();
 
         .card .h1 {
             font-size: 24px;
-            margin-bottom: 30px;
+            margin-bottom: 0px;
         }
 
         .card .h2 {
             font-size: 18px;
             font-weight: bold;
+            margin-bottom: 0;
         }
 
         .card .h3 {
@@ -138,12 +140,9 @@ $conn->close();
         }
 
         .card .hubungi {
-            position: inherit;
-            ;
-            bottom: 15px;
-            right: 15px;
             display: flex;
             align-items: center;
+            justify-content: center;
             font-size: 14px;
         }
 
@@ -197,6 +196,13 @@ $conn->close();
             transform: translateY(-2px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
             color: aliceblue;
+        }
+
+        .item-jadwal {
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -263,25 +269,27 @@ $conn->close();
             <div class="container py-1">
                 <div class="row justify-content-center">
                     <?php
-                    foreach ($dataPuskesmas as $namaPuskesmas => $data):?>
-                    <div class="col-xl-5 col-lg-6 col-12 mb-4 px-3">
-                    <div class="card h-100" style="max-width: 550px; margin-bottom:
-                        <?php echo ($count % 2 == 0)? '4px' : '2px'; ?>;">
-    
-                            <h2><?php echo htmlspecialchars($namaPuskesmas); ?></h2>
-                            <div class="schedule-container">
-                                <ul>
-                                    <?php foreach ($data['jadwal'] as $jadwal): ?>
-                                        <div class="schedule-item">
-                                            <li>
-                                                <span class="time h1"><?php echo htmlspecialchars($jadwal['hari']); ?></span>
-                                                <span class="jam h2"><?php echo htmlspecialchars($jadwal['jam']); ?></span><br>
-                                                <a class="jenis h3" style="color: #343a40;"><?php echo htmlspecialchars($jadwal['jenis_imunisasi']); ?></a>
-                                            </li>
-                                        </div>
-                                    <?php endforeach; ?>
+                    foreach ($dataPuskesmas as $namaPuskesmas => $data): ?>
+                        <div class="col-xl-5 col-lg-6 col-12 mb-4 px-3">
+                            <div class="card h-100" style="max-width: 550px; margin-bottom:
+                        <?php echo ($count % 2 == 0) ? '4px' : '2px'; ?>;">
 
-                                    <p>📍 <?php echo htmlspecialchars($data['alamat']); ?></p><br>
+                                <h2 class="text-center"><?php echo htmlspecialchars($namaPuskesmas); ?></h2>
+                                <div class="schedule-container">
+                                    <ul>
+                                        <?php foreach ($data['jadwal'] as $jadwal): ?>
+                                            <div class="schedule-item">
+                                                <li class="border-bottom">
+                                                    <div class="item-jadwal">
+                                                        <span class="time h1"><?php echo htmlspecialchars($jadwal['hari']); ?></span>
+                                                        <span class="jam h2"><?php echo htmlspecialchars($jadwal['jam']); ?></span>
+                                                    </div>
+                                                    <a class="jenis h3" style="color: #343a40;"><?php echo htmlspecialchars($jadwal['jenis_imunisasi']); ?></a>
+                                                </li>
+                                            </div>
+                                        <?php endforeach; ?>
+                                    </ul>
+                                    <p class="text-center">📍 <?php echo htmlspecialchars($data['alamat']); ?></p><br>
                                     <div class="hubungi">
                                         <a href="https://wa.me/<?php echo htmlspecialchars($data['kontak']); ?>?text=Mau%20daftar%20imunisasi%20di%20<?php echo urlencode($namaPuskesmas); ?>"
                                             class="whatsapp-btn"
@@ -289,10 +297,9 @@ $conn->close();
                                             <span class="whatsapp-icon"></span> Klik untuk Daftar Imunisasi
                                         </a>
                                     </div>
-                                </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <?php
                     endforeach;
                     ?>
